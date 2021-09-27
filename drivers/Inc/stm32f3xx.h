@@ -39,7 +39,7 @@
 #define GPIOF_BASEADDR			(AHB2PERIPH_BASE + 0x1400)
 #define GPIOG_BASEADDR			(AHB2PERIPH_BASE + 0x1800)
 #define GPIOH_BASEADDR			(AHB2PERIPH_BASE + 0x1800)
-
+#define RCC_BASEADDR			(AHB1PERIPH_BASE + 0x1000)
 /*
  * Base addresses of peripherals which are hanging on APB1 bus
  * TODO: Complete for all peripherals
@@ -115,7 +115,6 @@ typedef struct {
 #define GPIOF 						((GPIO_RegDef_t*) GPIOF_BASEADDR)
 #define GPIOG 						((GPIO_RegDef_t*) GPIOG_BASEADDR)
 #define GPIOH 						((GPIO_RegDef_t*) GPIOH_BASEADDR)
-
-
+#define RCC							((RCC_RegDef_t*) RCC_BASEADDR)
 
 #endif /* INC_STM32F3XX_H_ */
