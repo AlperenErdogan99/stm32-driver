@@ -158,6 +158,49 @@ typedef struct {
 #define UART4_PCLCK_EN()		(RCC -> APB1ENR |= (1 << 19))
 #define UART5_PCLCK_EN()		(RCC -> APB1ENR |= (1 << 20))
 
+/*
+ * Clock Disable Macros for GPIOx
+ */
+#define GPIOA_PCLCK_DI()	(RCC-> AHBENR &= ~(1 << 17))
+#define GPIOB_PCLCK_DI()	(RCC-> AHBENR &= ~(1 << 18))
+#define GPIOC_PCLCK_DI()	(RCC-> AHBENR &= ~(1 << 19))
+#define GPIOD_PCLCK_DI()	(RCC-> AHBENR &= ~(1 << 20))
+#define GPIOE_PCLCK_DI()	(RCC-> AHBENR &= ~(1 << 21))
+#define GPIOF_PCLCK_DI()	(RCC-> AHBENR &= ~(1 << 22))
+#define GPIOG_PCLCK_DI()	(RCC-> AHBENR &= ~(1 << 23))
+#define GPIOH_PCLCK_DI()	(RCC-> AHBENR &= ~(1 << 16))
+
+/*
+ * Clock Disable Macros for I2Cx
+ */
+
+#define I2C1_PCLCK_DI()			(RCC -> APB1ENR &= ~(1 << 21))
+#define I2C2_PCLCK_DI()			(RCC -> APB1ENR &= ~(1 << 22))
+#define I2C3_PCLCK_DI()			(RCC -> APB1ENR &= ~(1 << 30))
+
+
+/*
+ * Clock Disable Macros for SPIx
+ */
+
+#define SPI1_PCLCK_DI()			(RCC -> APB2ENR &= ~(1 << 12))
+#define SPI2_PCLCK_DI()			(RCC -> APB1ENR &= ~(1 << 14))
+#define SPI3_PCLCK_DI()			(RCC -> APB1ENR &= ~(1 << 15))
+#define SPI4_PCLCK_DI()			(RCC -> APB2ENR &= ~(1 << 15))
+
+
+/*
+ * Clock Disable Macros for USARTx
+ */
+
+#define USART1_PCLCK_DI()		(RCC -> APB2ENR &= ~(1 << 14))
+#define USART2_PCLCK_DI()		(RCC -> APB1ENR &= ~(1 << 17))
+#define USART3_PCLCK_DI()		(RCC -> APB1ENR &= ~(1 << 18))
+#define UART4_PCLCK_DI()		(RCC -> APB1ENR &= ~(1 << 19))
+#define UART5_PCLCK_DI()		(RCC -> APB1ENR &= ~(1 << 20))
+
+
+
 
 
 
