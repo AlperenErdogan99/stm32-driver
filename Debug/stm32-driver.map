@@ -31,6 +31,7 @@ Discarded input sections
  .group         0x0000000000000000        0xc ./Src/main.o
  .group         0x0000000000000000        0xc ./Src/main.o
  .group         0x0000000000000000        0xc ./Src/main.o
+ .group         0x0000000000000000        0xc ./Src/main.o
  .text          0x0000000000000000        0x0 ./Src/main.o
  .data          0x0000000000000000        0x0 ./Src/main.o
  .bss           0x0000000000000000        0x0 ./Src/main.o
@@ -586,24 +587,25 @@ LOAD c:/st/stm32cubeide_1.7.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.exte
  .debug_ranges  0x0000000000000000       0x10 ./Src/main.o
  .debug_ranges  0x0000000000000010       0x20 ./Startup/startup_stm32f303retx.o
 
-.debug_macro    0x0000000000000000      0xf6e
- .debug_macro   0x0000000000000000       0x6d ./Src/main.o
- .debug_macro   0x000000000000006d      0xab4 ./Src/main.o
- .debug_macro   0x0000000000000b21       0x22 ./Src/main.o
- .debug_macro   0x0000000000000b43       0x8e ./Src/main.o
- .debug_macro   0x0000000000000bd1       0x51 ./Src/main.o
- .debug_macro   0x0000000000000c22      0x103 ./Src/main.o
- .debug_macro   0x0000000000000d25       0x6a ./Src/main.o
- .debug_macro   0x0000000000000d8f      0x1df ./Src/main.o
+.debug_macro    0x0000000000000000     0x102b
+ .debug_macro   0x0000000000000000       0x6c ./Src/main.o
+ .debug_macro   0x000000000000006c      0xab4 ./Src/main.o
+ .debug_macro   0x0000000000000b20       0x22 ./Src/main.o
+ .debug_macro   0x0000000000000b42       0x8e ./Src/main.o
+ .debug_macro   0x0000000000000bd0       0x51 ./Src/main.o
+ .debug_macro   0x0000000000000c21      0x103 ./Src/main.o
+ .debug_macro   0x0000000000000d24       0x6a ./Src/main.o
+ .debug_macro   0x0000000000000d8e      0x1df ./Src/main.o
+ .debug_macro   0x0000000000000f6d       0xbe ./Src/main.o
 
 .debug_line     0x0000000000000000      0x45a
  .debug_line    0x0000000000000000      0x3d6 ./Src/main.o
  .debug_line    0x00000000000003d6       0x84 ./Startup/startup_stm32f303retx.o
 
-.debug_str      0x0000000000000000     0x3bc8
- .debug_str     0x0000000000000000     0x3b97 ./Src/main.o
-                                       0x3cf2 (size before relaxing)
- .debug_str     0x0000000000003b97       0x31 ./Startup/startup_stm32f303retx.o
+.debug_str      0x0000000000000000     0x3fe4
+ .debug_str     0x0000000000000000     0x3fb3 ./Src/main.o
+                                       0x410e (size before relaxing)
+ .debug_str     0x0000000000003fb3       0x31 ./Startup/startup_stm32f303retx.o
                                          0x6d (size before relaxing)
 
 .comment        0x0000000000000000       0x53
