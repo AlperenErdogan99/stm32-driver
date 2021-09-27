@@ -65,7 +65,7 @@
 #define SPI4_BASE			(APB2PERIPH_BASE + 0x3C00)
 #define EXTI_BASE			(APB2PERIPH_BASE + 0x0400)
 #define SYSCFG_BASE			(APB2PERIPH_BASE + 0x0000)
-
+/*
 /*
  * Note: Registers of a peripheral are specific to MCU
  * e.g: Number of Registers of SPI peripheral of stm32f4x family mcus may be different
@@ -85,6 +85,23 @@ typedef struct{
 	__vo uint32_t LCKR;				/*	GPIO port configuration lock register, 	addresses offset: 0x1C */
 	__vo uint32_t AFR[2];			/*	GPIO alternate function registers, 		addresses offset: 0x20, 0x24 */
 }GPIO_RegDef_t;
+
+typedef struct {
+	__vo uint32_t CR; 				/* Clock control register,					addresses offset: 0x00*/
+	__vo uint32_t CFGR; 			/* Clock configuration register,			addresses offset: 0x04*/
+	__vo uint32_t CIR; 				/* Clock interrupt register,				addresses offset: 0x08*/
+	__vo uint32_t APB2RSTR; 		/* APB2 peripheral reset register,			addresses offset: 0x0C*/
+	__vo uint32_t APB1RSTR; 		/* APB1 peripheral reset register,			addresses offset: 0x010*/
+	__vo uint32_t AHBENR; 			/* AHB peripheral clock enable register,	addresses offset: 0x14*/
+	__vo uint32_t APB2ENR; 			/* APB2 peripheral clock enable register,	addresses offset: 0x18*/
+	__vo uint32_t APB1ENR; 			/* APB1 peripheral clock enable register,	addresses offset: 0x1C*/
+	__vo uint32_t BDCR; 			/* RTC domain control register,				addresses offset: 0x20*/
+	__vo uint32_t CSR; 				/* Control/status register,					addresses offset: 0x24*/
+	__vo uint32_t AHBRSTR; 			/* AHB peripheral reset register,			addresses offset: 0x28*/
+	__vo uint32_t CFGR2; 			/* Clock configuration register 2,			addresses offset: 0x2c*/
+	__vo uint32_t CFGR3; 			/* Clock configuration register 3,			addresses offset: 0x30*/
+
+} RCC_RegDef_t;
 
 /*
  * peripheral definitons (Peripheral base addresses typecasted to xxx_RegDef_t)
