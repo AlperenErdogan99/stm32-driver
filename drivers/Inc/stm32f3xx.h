@@ -66,7 +66,7 @@
 #define SPI4_BASE			(APB2PERIPH_BASE + 0x3C00)
 #define EXTI_BASE			(APB2PERIPH_BASE + 0x0400)
 #define SYSCFG_BASE			(APB2PERIPH_BASE + 0x0000)
-/*
+
 /*
  * Note: Registers of a peripheral are specific to MCU
  * e.g: Number of Registers of SPI peripheral of stm32f4x family mcus may be different
