@@ -61,6 +61,7 @@
  * TODO: Complete for all peripherals
  * add offset value for all peripherals that bus
  */
+#define USART1_BASE			(APB2PERIPH_BASE + 0x3800)
 #define SPI1_BASE			(APB2PERIPH_BASE + 0x3000)
 #define SPI4_BASE			(APB2PERIPH_BASE + 0x3C00)
 #define EXTI_BASE			(APB2PERIPH_BASE + 0x0400)
@@ -135,18 +136,28 @@ typedef struct {
 /*
  * Clock Enable Macros for I2Cx peripherals
  */
-
-
+#define I2C1_PCLCK_EN()			(RCC -> APB1ENR |= (1 << 21))
+#define I2C2_PCLCK_EN()			(RCC -> APB1ENR |= (1 << 22))
+#define I2C3_PCLCK_EN()			(RCC -> APB1ENR |= (1 << 30))
 
 /*
  * Clock Enable Macros for SPIx peripherals
  */
 
-
+#define SPI1_PCLCK_EN()			(RCC -> APB2ENR |= (1 << 12))
+#define SPI2_PCLCK_EN()			(RCC -> APB1ENR |= (1 << 14))
+#define SPI3_PCLCK_EN()			(RCC -> APB1ENR |= (1 << 15))
+#define SPI4_PCLCK_EN()			(RCC -> APB2ENR |= (1 << 15))
 
 /*
  * Clock Enable Macros for USARTx peripherals
  */
+#define USART1_PCLCK_EN()		(RCC -> APB2ENR |= (1 << 14))
+#define USART2_PCLCK_EN()		(RCC -> APB1ENR |= (1 << 17))
+#define USART3_PCLCK_EN()		(RCC -> APB1ENR |= (1 << 18))
+#define UART4_PCLCK_EN()		(RCC -> APB1ENR |= (1 << 19))
+#define UART5_PCLCK_EN()		(RCC -> APB1ENR |= (1 << 20))
+
 
 
 
