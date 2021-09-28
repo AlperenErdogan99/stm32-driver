@@ -199,8 +199,15 @@ typedef struct {
 #define UART4_PCLCK_DI()		(RCC -> APB1ENR &= ~(1 << 19))
 #define UART5_PCLCK_DI()		(RCC -> APB1ENR &= ~(1 << 20))
 
-
-
+/*
+ * some generic macros
+ */
+#define ENABLE 					1
+#define DISABLE 				0
+#define SET 					ENABLE
+#define RESET 					DISABLE
+#define GPIO_PIN_SET 			SET
+#define GPIO_PIN_RESET 			RESET
 
 
 
