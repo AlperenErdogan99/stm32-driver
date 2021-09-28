@@ -23,8 +23,46 @@
  * @Note		- none
  *
  */
-void GPIO_PeripheralClockControl(GPIO_RegDef_t *pGPIOx, uint8_t EnorDi){
+void GPIO_PeripheralClockControl(GPIO_RegDef_t *pGPIOx, uint8_t EnorDi) {
 
+	if (EnorDi == ENABLE) {
+		if (pGPIOx == GPIOA) {
+			GPIOA_PCLCK_EN();
+		} else if (pGPIOx == GPIOB) {
+			GPIOB_PCLCK_EN();
+		} else if (pGPIOx == GPIOC) {
+			GPIOC_PCLCK_EN();
+		} else if (pGPIOx == GPIOD) {
+			GPIOD_PCLCK_EN();
+		} else if (pGPIOx == GPIOE) {
+			GPIOE_PCLCK_EN();
+		} else if (pGPIOx == GPIOF) {
+			GPIOF_PCLCK_EN();
+		} else if (pGPIOx == GPIOG) {
+			GPIOG_PCLCK_EN();
+		} else if (pGPIOx == GPIOH) {
+			GPIOH_PCLCK_EN();
+		}
+
+	} else {
+		if (pGPIOx == GPIOA) {
+			GPIOA_PCLCK_DI();
+		} else if (pGPIOx == GPIOB) {
+			GPIOB_PCLCK_DI();
+		} else if (pGPIOx == GPIOC) {
+			GPIOC_PCLCK_DI();
+		} else if (pGPIOx == GPIOD) {
+			GPIOD_PCLCK_DI();
+		} else if (pGPIOx == GPIOE) {
+			GPIOE_PCLCK_DI();
+		} else if (pGPIOx == GPIOF) {
+			GPIOF_PCLCK_DI();
+		} else if (pGPIOx == GPIOG) {
+			GPIOG_PCLCK_DI();
+		} else if (pGPIOx == GPIOH) {
+			GPIOH_PCLCK_DI();
+		}
+	}
 }
 
 /*
