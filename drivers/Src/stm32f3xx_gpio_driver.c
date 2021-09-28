@@ -69,6 +69,23 @@ void GPIO_PeripheralClockControl(GPIO_RegDef_t *pGPIOx, uint8_t EnorDi) {
  * Init and De-init
  */
 
+/*******************************
+ *
+ * @fn			- GPIO_PeripheralClockControl
+ *
+ * @brief		- This function enables or disables peripheral clock for the given GPIO port
+ *
+ * @param[in]	- base address of the GPIO peripheral
+ * @param[in]	- ENABLE or DISABLE macros
+ *
+ * @return		- none
+ * @Note		- none
+ * TODO: 1. configure the mode of pin
+ * 		 2. configure the speed
+ * 		 3. configure the pupd settings
+ * 		 4. configure the optype
+ * 		 5. configure the alt functionality
+ */
 void GPIO_Init(GPIO_Handle_t *pGPIOHandle){
 
 }
