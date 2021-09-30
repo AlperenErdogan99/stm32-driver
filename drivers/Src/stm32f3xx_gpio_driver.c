@@ -5,6 +5,7 @@
  *      Author: alperen
  */
 #include "stm32f3xx_gpio_driver.h"
+#include "stdio.h"
 
 /*
  * Peripheral Clock setup
@@ -128,7 +129,9 @@ void GPIO_Init(GPIO_Handle_t *pGPIOHandle) {
 
 	//configure the alternate function of the pin
 	if (pGPIOHandle->GPIO_PinConfig.GPIO_PinMode <= GPIO_MODE_ALTFN) {
-		uint8_t temp1, temp2;
+		uint8_t temp1;
+		uint8_t temp2;
+
 		temp1 = pGPIOHandle->GPIO_PinConfig.GPIO_PinNumber / 8;
 		temp2 = pGPIOHandle->GPIO_PinConfig.GPIO_PinNumber % 8;
 		pGPIOHandle->pGPIOx->AFR[temp1] &= ~(0xF << (4 * temp2));
@@ -142,18 +145,39 @@ void GPIO_Init(GPIO_Handle_t *pGPIOHandle) {
 
 void GPIO_DeInit(GPIO_RegDef_t *pGPIOx){
 
+	if (pGPIOx == GPIOA) {
+		GPIOA_REG_RESET();
+	} else if (pGPIOx == GPIOB) {
+		GPIOB_REG_RESET();
+	} else if (pGPIOx == GPIOC) {
+		GPIOC_REG_RESET();
+	} else if (pGPIOx == GPIOD) {
+		GPIOD_REG_RESET();
+	} else if (pGPIOx == GPIOE) {
+		GPIOE_REG_RESET();
+	} else if (pGPIOx == GPIOF) {
+		GPIOF_REG_RESET();
+	} else if (pGPIOx == GPIOG) {
+		GPIOG_REG_RESET();
+	} else if (pGPIOx == GPIOH) {
+		GPIOH_REG_RESET();
+	}
+
 }
 
 /*
  * Data read and write
  */
 uint8_t GPIO_ReadFromInputPin(GPIO_RegDef_t *pGPIOx, uint8_t PinNumber){
-
-
+	uint8_t value;
+	value = ((pGPIOx->IDR >> PinNumber) & 0x00000001);
+	return value;
 }
 
 uint16_t GPIO_ReadFromInputPort(GPIO_RegDef_t *pGPIOx){
-
+	uint16_t value;
+	value = (uint16_t)pGPIOx->IDR;
+	return value;
 }
 
 void GPIO_WriteToOutputPin(GPIO_RegDef_t *pGPIOx, uint8_t PinNumber, uint8_t Value){

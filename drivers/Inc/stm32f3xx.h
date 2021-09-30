@@ -7,7 +7,7 @@
 
 #ifndef INC_STM32F3XX_H_
 #define INC_STM32F3XX_H_
-
+#include "stdio.h"
 #define __vo volatile
 /*
  * base address of flash
@@ -198,6 +198,24 @@ typedef struct {
 #define USART3_PCLCK_DI()		(RCC -> APB1ENR &= ~(1 << 18))
 #define UART4_PCLCK_DI()		(RCC -> APB1ENR &= ~(1 << 19))
 #define UART5_PCLCK_DI()		(RCC -> APB1ENR &= ~(1 << 20))
+
+/*
+ * Macros to reset GPIOx peripherals
+ */
+
+#define GPIOA_REG_RESET() 		do { (RCC-> AHBENR |= (1 << 17));   (RCC-> AHBENR &= ~(1 << 17));}while(0)
+#define GPIOB_REG_RESET() 		do { (RCC-> AHBENR |= (1 << 18));   (RCC-> AHBENR &= ~(1 << 18));}while(0)
+#define GPIOC_REG_RESET() 		do { (RCC-> AHBENR |= (1 << 19));   (RCC-> AHBENR &= ~(1 << 19));}while(0)
+#define GPIOD_REG_RESET() 		do { (RCC-> AHBENR |= (1 << 20));   (RCC-> AHBENR &= ~(1 << 20));}while(0)
+#define GPIOE_REG_RESET() 		do { (RCC-> AHBENR |= (1 << 21));   (RCC-> AHBENR &= ~(1 << 21));}while(0)
+#define GPIOF_REG_RESET() 		do { (RCC-> AHBENR |= (1 << 22));   (RCC-> AHBENR &= ~(1 << 22));}while(0)
+#define GPIOG_REG_RESET() 		do { (RCC-> AHBENR |= (1 << 23));   (RCC-> AHBENR &= ~(1 << 23));}while(0)
+#define GPIOH_REG_RESET() 		do { (RCC-> AHBENR |= (1 << 16));   (RCC-> AHBENR &= ~(1 << 16));}while(0)
+
+
+
+
+
 
 /*
  * some generic macros

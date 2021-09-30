@@ -9,6 +9,7 @@
 #define INC_STM32F3XX_GPIO_DRIVER_H_
 
 #include "stm32f3xx.h"
+#include "stdio.h"
 /*
  * This is a configuration structure for a GPIO pin
  */
