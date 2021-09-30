@@ -4,9 +4,8 @@
  *  Created on: Sep 27, 2021
  *      Author: alperen
  */
+#include "stm32f3xx.h"
 #include "stm32f3xx_gpio_driver.h"
-#include "stdio.h"
-
 /*
  * Peripheral Clock setup
  */

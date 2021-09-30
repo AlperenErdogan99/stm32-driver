@@ -7,8 +7,9 @@
 
 #ifndef INC_STM32F3XX_H_
 #define INC_STM32F3XX_H_
-#include "stdio.h"
 #define __vo volatile
+
+#include "stdio.h"
 /*
  * base address of flash
  */
