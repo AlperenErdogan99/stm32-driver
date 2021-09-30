@@ -55,6 +55,7 @@ typedef struct{
 /*
  * @GPIO_PIN_MODES
  * GPIO pin possible modes
+ * note: if less than 3 its normal mode.
  */
 #define GPIO_MODE_IN 		0
 #define GPIO_MODE_OUT 		1
