@@ -91,10 +91,8 @@ void GPIO_Init(GPIO_Handle_t *pGPIOHandle) {
 	//configure the mode of pin
 	if (pGPIOHandle->GPIO_PinConfig.GPIO_PinMode <= GPIO_MODE_ANALOG) {
 		//the non interrupt mode
-		temp = (pGPIOHandle->GPIO_PinConfig.GPIO_PinMode
-				<< (2 * pGPIOHandle->GPIO_PinConfig.GPIO_PinNumber));
-		pGPIOHandle->pGPIOx->MODER &= ~(0x3
-				<< pGPIOHandle->GPIO_PinConfig.GPIO_PinNumber); // clear the set area
+		temp = (pGPIOHandle->GPIO_PinConfig.GPIO_PinMode << (2 * pGPIOHandle->GPIO_PinConfig.GPIO_PinNumber));
+		pGPIOHandle->pGPIOx->MODER &= ~(0x3 << pGPIOHandle->GPIO_PinConfig.GPIO_PinNumber); // clear the set area
 		pGPIOHandle->pGPIOx->MODER |= temp;
 
 	} else {
@@ -103,26 +101,20 @@ void GPIO_Init(GPIO_Handle_t *pGPIOHandle) {
 
 	// configure the speed of pin
 	temp = 0;
-	temp = (pGPIOHandle->GPIO_PinConfig.GPIO_PinSpeed
-			<< (2 * pGPIOHandle->GPIO_PinConfig.GPIO_PinNumber));
-	pGPIOHandle->pGPIOx->OSPEEDR &= ~(0x3
-			<< pGPIOHandle->GPIO_PinConfig.GPIO_PinNumber);
+	temp = (pGPIOHandle->GPIO_PinConfig.GPIO_PinSpeed << (2 * pGPIOHandle->GPIO_PinConfig.GPIO_PinNumber));
+	pGPIOHandle->pGPIOx->OSPEEDR &= ~(0x3 << pGPIOHandle->GPIO_PinConfig.GPIO_PinNumber);
 	pGPIOHandle->pGPIOx->OSPEEDR |= temp;
 	temp = 0;
 
 	// configure the pull up pull down of pin
-	temp = (pGPIOHandle->GPIO_PinConfig.GPIO_PinPuPdControl
-			<< (2 * pGPIOHandle->GPIO_PinConfig.GPIO_PinNumber));
-	pGPIOHandle->pGPIOx->PUPDR &= ~(0x3
-			<< pGPIOHandle->GPIO_PinConfig.GPIO_PinNumber);
+	temp = (pGPIOHandle->GPIO_PinConfig.GPIO_PinPuPdControl << (2 * pGPIOHandle->GPIO_PinConfig.GPIO_PinNumber));
+	pGPIOHandle->pGPIOx->PUPDR &= ~(0x3 << pGPIOHandle->GPIO_PinConfig.GPIO_PinNumber);
 	pGPIOHandle->pGPIOx->PUPDR |= temp;
 	temp = 0;
 
 	// configure the output type of pin
-	temp = (pGPIOHandle->GPIO_PinConfig.GPIO_PinOpType
-			<< (pGPIOHandle->GPIO_PinConfig.GPIO_PinNumber));
-	pGPIOHandle->pGPIOx->OTYPER &= ~(0x1
-			<< pGPIOHandle->GPIO_PinConfig.GPIO_PinNumber);
+	temp = (pGPIOHandle->GPIO_PinConfig.GPIO_PinOpType << (pGPIOHandle->GPIO_PinConfig.GPIO_PinNumber));
+	pGPIOHandle->pGPIOx->OTYPER &= ~(0x1 << pGPIOHandle->GPIO_PinConfig.GPIO_PinNumber);
 	pGPIOHandle->pGPIOx->OTYPER |= temp;
 	temp = 0;
 
@@ -134,8 +126,7 @@ void GPIO_Init(GPIO_Handle_t *pGPIOHandle) {
 		temp1 = pGPIOHandle->GPIO_PinConfig.GPIO_PinNumber / 8;
 		temp2 = pGPIOHandle->GPIO_PinConfig.GPIO_PinNumber % 8;
 		pGPIOHandle->pGPIOx->AFR[temp1] &= ~(0xF << (4 * temp2));
-		pGPIOHandle->pGPIOx->AFR[temp1] |=
-				(pGPIOHandle->GPIO_PinConfig.GPIO_PinAltFunMode << (4 * temp2));
+		pGPIOHandle->pGPIOx->AFR[temp1] |= (pGPIOHandle->GPIO_PinConfig.GPIO_PinAltFunMode << (4 * temp2));
 	}
 
 }
