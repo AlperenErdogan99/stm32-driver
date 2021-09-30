@@ -307,11 +307,11 @@ Discarded input sections
  .text.GPIO_ReadFromInputPort
                 0x0000000000000000       0x1c ./drivers/Src/stm32f3xx_gpio_driver.o
  .text.GPIO_WriteToOutputPin
-                0x0000000000000000       0x1c ./drivers/Src/stm32f3xx_gpio_driver.o
+                0x0000000000000000       0x4a ./drivers/Src/stm32f3xx_gpio_driver.o
  .text.GPIO_WriteToOutputPort
-                0x0000000000000000       0x18 ./drivers/Src/stm32f3xx_gpio_driver.o
+                0x0000000000000000       0x1e ./drivers/Src/stm32f3xx_gpio_driver.o
  .text.GPIO_ToogleOutputPin
-                0x0000000000000000       0x18 ./drivers/Src/stm32f3xx_gpio_driver.o
+                0x0000000000000000       0x2a ./drivers/Src/stm32f3xx_gpio_driver.o
  .text.GPIO_IRQConfig
                 0x0000000000000000       0x1e ./drivers/Src/stm32f3xx_gpio_driver.o
  .text.GPIO_IRQHandling
@@ -357,7 +357,7 @@ Discarded input sections
  .debug_macro   0x0000000000000000      0x145 ./drivers/Src/stm32f3xx_gpio_driver.o
  .debug_macro   0x0000000000000000      0x272 ./drivers/Src/stm32f3xx_gpio_driver.o
  .debug_macro   0x0000000000000000       0xbe ./drivers/Src/stm32f3xx_gpio_driver.o
- .debug_line    0x0000000000000000      0x8d2 ./drivers/Src/stm32f3xx_gpio_driver.o
+ .debug_line    0x0000000000000000      0x8f9 ./drivers/Src/stm32f3xx_gpio_driver.o
  .debug_str     0x0000000000000000     0x8bf9 ./drivers/Src/stm32f3xx_gpio_driver.o
  .comment       0x0000000000000000       0x54 ./drivers/Src/stm32f3xx_gpio_driver.o
  .debug_frame   0x0000000000000000      0x1a0 ./drivers/Src/stm32f3xx_gpio_driver.o

@@ -4,7 +4,7 @@ stm32f3xx_gpio_driver.c:146:6:GPIO_DeInit	16	static
 stm32f3xx_gpio_driver.c:171:9:GPIO_ReadFromInputPin	24	static
 stm32f3xx_gpio_driver.c:177:10:GPIO_ReadFromInputPort	24	static
 stm32f3xx_gpio_driver.c:183:6:GPIO_WriteToOutputPin	16	static
-stm32f3xx_gpio_driver.c:187:6:GPIO_WriteToOutputPort	16	static
-stm32f3xx_gpio_driver.c:191:6:GPIO_ToogleOutputPin	16	static
-stm32f3xx_gpio_driver.c:199:6:GPIO_IRQConfig	16	static
-stm32f3xx_gpio_driver.c:204:6:GPIO_IRQHandling	16	static
+stm32f3xx_gpio_driver.c:193:6:GPIO_WriteToOutputPort	16	static
+stm32f3xx_gpio_driver.c:197:6:GPIO_ToogleOutputPin	16	static
+stm32f3xx_gpio_driver.c:204:6:GPIO_IRQConfig	16	static
+stm32f3xx_gpio_driver.c:209:6:GPIO_IRQHandling	16	static

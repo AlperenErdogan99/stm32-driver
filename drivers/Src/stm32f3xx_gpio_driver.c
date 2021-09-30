@@ -195,8 +195,7 @@ void GPIO_WriteToOutputPort(GPIO_RegDef_t *pGPIOx, uint16_t Value){
 }
 
 void GPIO_ToogleOutputPin(GPIO_RegDef_t *pGPIOx, uint8_t PinNumber){
-
-
+	pGPIOx->ODR ^= (1<<PinNumber);
 }
 
 /*
