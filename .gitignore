@@ -1,45 +1,42 @@
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
-
-# Libraries
-*.lib
-*.a
-*.la
+# Compiled Object files
+*.slo
 *.lo
+*.o
 
-# Shared objects (inc. Windows DLLs)
-*.dll
+# Compiled Dynamic libraries
 *.so
-*.so.*
 *.dylib
 
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+#*.ld
+
+# Compiled binaries
+*.bin
+*.elf
 *.hex
-
-# Misc
 *.map
-*.m
-*.png
 
-# Eclipse CDT project files
-.cproject
-.project
-.settings/
+# Eclipse workfiles
+*.xml
+.settings
+Debug
+Release
 
-# Vagrant directory
-.vagrant/
+# CooCox workfiles
+*.cogui
+*.comarker
+#*.coproj
+*.pbxproj
+*.comemgui
+*.cproject
+*.project
+debug.config
 
-# Include makefiles
-!Makefile
-*~
+# JLink
+*.jflash
 
-# Libraries
-/lib
+# Trash
+*.bak
