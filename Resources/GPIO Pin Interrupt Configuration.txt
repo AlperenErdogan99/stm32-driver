@@ -1,0 +1,7 @@
+1. Pin must be in input configuration
+2. Configure the edge trigger (RT, FT, RFT)
+3. Enable interrupt delivery from peripheral to the processor (on peripheral side)
+4. Identify the IRQ number on which processors accepts the interrupt from that pin
+5. Configure the IRQ priority for the identified IRQ number (Processor side)
+6. Enable interrupt reception on that IRQ number (Processor side)
+7. Implement IRQ Handler

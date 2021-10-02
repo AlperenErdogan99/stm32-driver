@@ -106,6 +106,26 @@ typedef struct {
 } RCC_RegDef_t;
 
 /*
+ * Peripheral definition structure for EXTI
+ */
+
+typedef struct{
+	__vo uint32_t IMR1;				/* Interrupt mask register,					addresses offset: 0x00 */
+	__vo uint32_t EMR1;				/* Event mask register,						addresses offset: 0x04 */
+	__vo uint32_t RTSR1;			/* Rising trigger selection register, 		addresses offset: 0x08 */
+	__vo uint32_t FTSR1;			/* Faling trigger selection register, 		addresses offset: 0x0C */
+	__vo uint32_t SWIER1;			/* Software interrupt event register, 		addresses offset: 0x10 */
+	__vo uint32_t PR1;				/* Pending register,				 		addresses offset: 0x14 */
+}EXTI_RegDef_t;
+
+/*
+ * peripheral register definitions structure for SYSCFG
+ */
+typedef struct{
+
+}SYSCFG_Reg_Def_t;
+
+/*
  * peripheral definitons (Peripheral base addresses typecasted to xxx_RegDef_t)
  */
 
@@ -118,7 +138,7 @@ typedef struct {
 #define GPIOG 						((GPIO_RegDef_t*) GPIOG_BASEADDR)
 #define GPIOH 						((GPIO_RegDef_t*) GPIOH_BASEADDR)
 #define RCC							((RCC_RegDef_t*) RCC_BASEADDR)
-
+#define EXTI						((EXTI_RegDef_t*) EXTI_BASEADDR)
 
 /*
  * Clock Enable Macros for GPIOx peripherals
@@ -158,6 +178,11 @@ typedef struct {
 #define USART3_PCLCK_EN()		(RCC -> APB1ENR |= (1 << 18))
 #define UART4_PCLCK_EN()		(RCC -> APB1ENR |= (1 << 19))
 #define UART5_PCLCK_EN()		(RCC -> APB1ENR |= (1 << 20))
+
+/*
+ * Clock Enable Macro for SYSCFG
+ */
+#define SYSCFG_PCLCK_EN()		(RCC -> APB2ENR |= (1 << 0))
 
 /*
  * Clock Disable Macros for GPIOx
