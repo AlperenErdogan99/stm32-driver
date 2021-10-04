@@ -122,7 +122,13 @@ typedef struct{
  * peripheral register definitions structure for SYSCFG
  */
 typedef struct{
-
+	__vo uint32_t CFGR1;			/*Configuration register 1,					 addresses offset: 0x00 */
+	__vo uint32_t RCR;				/*SRAM protection register,					 addresses offset: 0x04 */
+	__vo uint32_t EXTICR1;			/*External interrupt configuration register1,addresses offset: 0x08 */
+	__vo uint32_t EXTICR2;			/*External interrupt configuration register2,addresses offset: 0x0C */
+	__vo uint32_t EXTICR3;			/*External interrupt configuration register3,addresses offset: 0x10 */
+	__vo uint32_t EXTICR4;			/*External interrupt configuration register4,addresses offset: 0x14 */
+	__vo uint32_t CFGR2;			/*Configuration register 2,					 addresses offset: 0x18 */
 }SYSCFG_Reg_Def_t;
 
 /*
